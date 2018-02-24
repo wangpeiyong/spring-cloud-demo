@@ -1,0 +1,35 @@
+cloud-service/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+/spring-cloud-demo.iml
+/cloud-service/target/
+/cloud-service/cloud-service.iml
+/cloud-eureka-server/target/
+/cloud-eureka-server/cloud-eureka-server.iml
+/cloud-customer/target/
+/cloud-customer/cloud-customer.iml
+/api-gateway/target/
+/api-gateway/api-gateway.iml
+/cloud-admin/target/
+/cloud-trace/target/

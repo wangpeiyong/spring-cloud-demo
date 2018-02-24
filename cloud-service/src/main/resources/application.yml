@@ -1,0 +1,22 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: cloud-service
+  zipkin:
+    base-url: http://localhost:9411
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}} #ע����ʾ��
+management.security.enabled: false
+
+#feign的hystrix默认是关闭的，需要开启
+feign:
+  hystrix:
+   enabled: true
