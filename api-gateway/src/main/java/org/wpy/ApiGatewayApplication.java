@@ -10,12 +10,12 @@ import org.wpy.filter.AccessFilter;
 @EnableZuulProxy
 public class ApiGatewayApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ApiGatewayApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ApiGatewayApplication.class, args);
+    }
 
-	@Bean
-	public AccessFilter accessFilter() {
-		return new AccessFilter();
-	}
+    @Bean
+    public AccessFilter accessFilter() {
+        return new AccessFilter();
+    }
 }

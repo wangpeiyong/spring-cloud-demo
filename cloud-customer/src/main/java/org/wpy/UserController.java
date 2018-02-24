@@ -18,30 +18,29 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/getUser")
-    public User getUser(){
+    public User getUser() {
         return userService.getUser();
     }
 
     @PostMapping("/postUser")
-    public User[] postUser(){
+    public User[] postUser() {
         return userService.postUser();
     }
 
 
     @PostMapping("/postUserName")
-    public String postUserName(){
+    public String postUserName() {
         return userService.postUserName();
     }
 
     @GetMapping("/getUserName")
-    public String getUserName(){
+    public String getUserName() {
         return userService.getUserName();
     }
 
 
-
     @GetMapping("/getPropeties")
-    public Properties getPropeties(){
+    public Properties getPropeties() {
         return System.getProperties();
     }
 }

@@ -5,9 +5,9 @@ package org.wpy;
  */
 public class Role {
 
-    private String name ;
+    private String name;
 
-    private Integer id ;
+    private Integer id;
 
     public Role(String name, Integer id) {
         this.name = name;

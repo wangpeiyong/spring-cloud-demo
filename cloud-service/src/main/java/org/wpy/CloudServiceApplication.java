@@ -15,19 +15,18 @@ import org.springframework.web.client.RestTemplate;
 @EnableFeignClients
 @EnableCircuitBreaker
 public class CloudServiceApplication {
-	@Bean
-	@LoadBalanced
-	public RestTemplate getRestTemplate(){
-		return new RestTemplate();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CloudServiceApplication.class, args);
+    }
 
+    @Bean
+    @LoadBalanced
+    public RestTemplate getRestTemplate() {
+        return new RestTemplate();
+    }
 
-	@Bean
-	public AlwaysSampler defaultSampler(){
-		return new AlwaysSampler();
-	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(CloudServiceApplication.class, args);
-	}
+    @Bean
+    public AlwaysSampler defaultSampler() {
+        return new AlwaysSampler();
+    }
 }

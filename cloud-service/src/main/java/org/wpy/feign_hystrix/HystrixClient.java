@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by wpy on 2017/3/31.
  */
 @FeignClient(name = "hello", fallback = HystrixClientFallback.class)
-public interface HystrixClient {@RequestMapping(method = RequestMethod.GET, value = "/hello")
+public interface HystrixClient {
+    @RequestMapping(method = RequestMethod.GET, value = "/hello")
     String iFailSometimes();
 }
 

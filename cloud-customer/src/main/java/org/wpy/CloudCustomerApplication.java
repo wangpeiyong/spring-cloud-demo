@@ -18,19 +18,18 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 public class CloudCustomerApplication {
 
-	@Bean
-	@LoadBalanced
-	public RestTemplate getRestTemplate(){
-		return new RestTemplate();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CloudCustomerApplication.class, args);
+    }
 
+    @Bean
+    @LoadBalanced
+    public RestTemplate getRestTemplate() {
+        return new RestTemplate();
+    }
 
-	@Bean
-	public AlwaysSampler defaultSampler(){
-		return new AlwaysSampler();
-	}
-
-	public static void main(String[] args) {
-		SpringApplication.run(CloudCustomerApplication.class, args);
-	}
+    @Bean
+    public AlwaysSampler defaultSampler() {
+        return new AlwaysSampler();
+    }
 }

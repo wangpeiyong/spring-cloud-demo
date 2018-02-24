@@ -12,23 +12,23 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProviderRoleController {
 
     @PostMapping("/getRole")
-    public Role getRole(@RequestBody Role role){
+    public Role getRole(@RequestBody Role role) {
         return role;
     }
 
     @PostMapping("/postRole")
-    public Role postRole(){
-        return new Role("管理员",12);
+    public Role postRole() {
+        return new Role("管理员", 12);
     }
 
 
     @PostMapping("/postRoleName")
-    public String postRoleName(){
+    public String postRoleName() {
         return "管理员";
     }
 
     @GetMapping("/getRoleName")
-    public String getRoleName(){
+    public String getRoleName() {
         return "zhangsan";
     }
 }

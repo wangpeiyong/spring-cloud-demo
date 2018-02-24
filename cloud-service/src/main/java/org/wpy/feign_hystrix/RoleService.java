@@ -11,12 +11,12 @@ import org.wpy.Role;
  */
 
 
-@FeignClient(name = "cloud-boss",fallback = HystrixFallBackHandler.class )
+@FeignClient(name = "cloud-boss", fallback = HystrixFallBackHandler.class)
 public interface RoleService {
 
     /**
-     *  error：feign的对象参数请求都是post，声明为GET方法时候，还是post发送。
-     *        修改服务提供当的方法为post。
+     * error：feign的对象参数请求都是post，声明为GET方法时候，还是post发送。
+     * 修改服务提供当的方法为post。
      */
     @GetMapping("/getRole")
     Role getRole(@RequestBody Role role);

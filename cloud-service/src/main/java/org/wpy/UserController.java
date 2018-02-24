@@ -11,23 +11,23 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @GetMapping("/getUser")
-    public User getUser(){
-        return new User("zhangsan",12);
+    public User getUser() {
+        return new User("zhangsan", 12);
     }
 
     @PostMapping("/postUser")
-    public User postUser(){
-        return new User("zhangsan",12);
+    public User postUser() {
+        return new User("zhangsan", 12);
     }
 
 
     @PostMapping("/postUserName")
-    public String postUserName(){
+    public String postUserName() {
         return "zhangsan";
     }
 
     @GetMapping("/getUserName")
-    public String getUserName(){
+    public String getUserName() {
         return "zhangsan";
     }
 }
